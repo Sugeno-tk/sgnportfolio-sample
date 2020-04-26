@@ -1,0 +1,497 @@
+body {
+  background: #000;
+  font-family: 'Arial', serif;
+  font-weight: 900;
+  text-align: center;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+
+a {
+  color: #fff;
+}
+
+// 全体
+
+.inner {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.section-title {
+  font-family: '游ゴシック体';
+  font-weight: normal;
+}
+
+// ヘッダー
+
+#nav-icn {
+  display: none;
+}
+
+#global-nav {
+  display: none;
+}
+
+#gnav {
+  font-family: "游ゴシック体";
+  font-weight: normal;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 10;
+    ul {
+      padding: 0;
+      margin-bottom: 0;
+      width: 100%;
+      display: flex;
+        li {
+          float: left;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .logo {
+          font-family: serif;
+          width: 20%;
+          border-bottom: solid 7px #2a2a2a;
+        }
+        .profile {
+          width: 20%;
+          border-bottom: solid 7px #b92c25;
+        }
+        .skill {
+          width: 20%;
+          border-bottom: solid 7px #fb581f;
+        }
+        .works {
+          width: 20%;
+          border-bottom: solid 7px #22a6bf;
+        }
+        .contact {
+          width: 20%;
+          border-bottom: solid 7px #fff;
+        }
+    }
+    a {
+      text-decoration: none;
+    }
+}
+
+#header {
+  .profile a:hover {
+    color: #b92c25;
+  }
+  .skill a:hover {
+    color: #fb581f;
+  }
+  .works a:hover {
+    color: #22a6bf;
+  }
+  .contact a:hover {
+    color: #fff;
+    opacity: .5;
+  }
+}
+
+// セクション
+
+section {
+  .inner {
+    padding: 80px 10px 10px 0px;
+  }
+  .section-title-block {
+    text-align: center;
+    margin-bottom: 30px
+  }
+}
+
+// プロフィール
+
+.profile-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: flex;
+  a:hover {
+    color: #22a6bf;
+  }
+  .icon-img {
+    width: 33%;
+  }
+  .profile-content {
+    width: 62%;
+    .text {
+      text-align: left;
+    }
+  }
+}
+
+// スキル
+
+.card-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .card {
+    display: flex;
+    width: 33%;
+    justify-content: center;
+    ul {
+      padding: 0 20px;
+    }
+    // .skill-card-title {
+    //   border-top: solid #fff;
+    // }
+    .skill-level {
+      position: relative;
+      display: inline-block;
+      width: 100px;
+      height: 20px;
+      font-size: 20px;
+    }
+    .skill-level:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '▷▷▷▷▷';
+      display: inline-block;
+      color: #fff;
+    }
+    .skill-level:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '▶︎▶︎▶︎▶︎▶︎';
+      display: inline-block;
+      color: #b92c25;
+      overflow: hidden;
+    }
+    .level1:after {
+      width: 20px;
+    }
+    .level2:after {
+      width: 40px;
+    }
+    .level3:after {
+      width: 60px;
+    }
+    .level4:after {
+      width: 80px;
+    }
+    .level5:after {
+      width: 100px;
+    }
+  }
+}
+
+// ポートフォリオ
+
+figure {
+  margin: 0;
+  display: block;
+  a:hover {
+    opacity: .5;
+  }
+}
+
+#works .card {
+  display: inline-block;
+  width: 33%;
+}
+
+// 問い合わせ
+
+#contact ul {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  li {
+    width: 30px;
+    margin-right: 60px;
+    .circle {
+      border-radius: 50%;
+    }
+    .social-link {
+      display: flex;
+      height: 75px;
+      width: 75px;
+      background-color: #2a2a2a;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #22a6bf;
+    }
+  }
+}
+
+// メディアクエリ
+
+@media screen and (max-width: 767px) {
+  // SP
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    ul {
+      margin-top: 2.5em;
+    }
+    .sp-off {
+      display: none;
+    }
+    #nav-icn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 0.8em;
+  		width: 4em;
+  		height: 3em;
+      display: block;
+      margin-top: 0;
+      z-index: 15;
+      }
+  }
+
+  // トグルメニュー
+  #nav-toggle {
+    position:fixed;
+    top: 0.6em;
+    left: 1.5em;
+    width: 1.8em;
+    height: 1.2em;
+      div {
+        position: relative;
+        // width:
+      }
+      span {
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        transition: transform .6s ease-in-out, top .5s ease;
+        &:nth-child(1) {
+          top: 0;
+        }
+        &:nth-child(2) {
+          top: 0.6em;
+        }
+        &:nth-child(3) {
+          top: 1.2em;
+        }
+      }
+  }
+
+  .open {
+    #nav-toggle span {
+      &:nth-child(1) {
+        top: 0.5em;
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        top: 20px;
+        width: 0;
+        left: 50%;
+      }
+      &:nth-child(3) {
+        top: 0.5em;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  #nav-toggle {
+    z-index: 20;
+    cursor: pointer;
+  }
+
+  #global-nav {
+    nav {
+      width: 100%;
+      ul {
+        padding: 0;
+      }
+    }
+    font-family: "游ゴシック体";
+    font-weight: normal;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 18;
+    text-align: center;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 29px;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+    .profile {
+      border-bottom: solid 7px #b92c25;
+    }
+    .skill {
+      border-bottom: solid 7px #fb581f;
+    }
+    .works {
+      border-bottom: solid 7px #22a6bf;
+    }
+    .contact {
+      border-bottom: solid 7px #fff;
+    }
+    a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: color .6s ease;
+      &:hover {
+        color: #666;
+      }
+    }
+
+    ul {
+    list-style: none;
+      li {
+        opacity: 0;
+        transform: translateX(200px);
+        transition:  transform .6s ease, opacity .2s ease;
+        &:nth-child(2) {
+          transition-delay: .15s;
+        }
+        &:nth-child(3) {
+          transition-delay: .3s;
+        }
+        &:nth-child(4) {
+          transition-delay: .45s;
+        }
+        &:nth-child(5) {
+          transition-delay: .6s;
+        }
+        &:nth-child(6) {
+          transition-delay: .75s;
+        }
+        &:nth-child(7) {
+          transition-delay: .9s;
+        }
+      }
+    }
+  }
+
+  .open {
+    overflow: hidden;
+    #global-nav {
+      visibility: visible;
+      opacity: 1;
+    }
+    #global-nav li {
+      opacity: 1;
+      transform: translateX(0);
+      transition:  transform 1s ease, opacity .9s ease;
+    }
+  }
+
+  .close {
+    #global-nav {
+      visibility: hidden;
+      opacity: 0;
+    }
+    #global-nav li {
+      opacity: 0;
+      transform: translateX(0);
+      transition:  transform 1s ease, opacity .9s ease;
+    }
+  }
+
+  // session
+  .profile-wrapper {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    .icon-img {
+      margin: 0 0 30px 0;
+      width: auto;
+    }
+    .profile-content {
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  .center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 11;
+    font-size: 1em;
+    margin-top: 1.6em;
+    font-family: serif;
+    font-weight: normal;
+    width: 25%;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  #nav {
+    display: none;
+    width: 100%;
+    padding-top: 14px;
+  }
+
+  #nav li {
+		position: relative;
+		bottom: 1px;
+		font-size: 0;
+		line-height: 0;
+	}
+
+	#nav li a {
+		display: block;
+		padding-top: 10%;
+		background-repeat: no-repeat;
+		background-position: center -40%;
+	}
+
+
+  #skill {
+    .card-wrapper .card {
+      width: 50%;
+    }
+  }
+
+  #works {
+    .card-wrapper .card {
+      width: 100%;
+      margin: 0 0 30px 0;
+    }
+  }
+}

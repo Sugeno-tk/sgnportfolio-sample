@@ -1,0 +1,138 @@
+@charset "UTF-8";
+body { background: #000; font-family: 'Arial', serif; font-weight: 900; text-align: center; color: #fff; }
+
+li { list-style: none; }
+
+a { color: #fff; }
+
+.inner { max-width: 1320px; width: 100%; margin: 0 auto; padding: 0 10px; }
+
+.section-title { font-family: '游ゴシック体'; font-weight: normal; }
+
+#nav-icn { display: none; }
+
+#global-nav { display: none; }
+
+#gnav { font-family: "游ゴシック体"; font-weight: normal; position: fixed; top: 0; left: 0; width: 100%; background-color: #000; z-index: 10; }
+
+#gnav ul { padding: 0; margin-bottom: 0; width: 100%; display: flex; }
+
+#gnav ul li { float: left; display: inline-flex; justify-content: center; align-items: center; }
+
+#gnav ul .logo { font-family: serif; width: 20%; border-bottom: solid 7px #2a2a2a; }
+
+#gnav ul .profile { width: 20%; border-bottom: solid 7px #b92c25; }
+
+#gnav ul .skill { width: 20%; border-bottom: solid 7px #fb581f; }
+
+#gnav ul .works { width: 20%; border-bottom: solid 7px #22a6bf; }
+
+#gnav ul .contact { width: 20%; border-bottom: solid 7px #fff; }
+
+#gnav a { text-decoration: none; }
+
+#header .profile a:hover { color: #b92c25; }
+
+#header .skill a:hover { color: #fb581f; }
+
+#header .works a:hover { color: #22a6bf; }
+
+#header .contact a:hover { color: #fff; opacity: .5; }
+
+section .inner { padding: 80px 10px 10px 0px; }
+
+section .section-title-block { text-align: center; margin-bottom: 30px; }
+
+.profile-wrapper { width: 80%; margin: 0 auto; padding: 30px 0; display: flex; }
+
+.profile-wrapper a:hover { color: #22a6bf; }
+
+.profile-wrapper .icon-img { width: 33%; }
+
+.profile-wrapper .profile-content { width: 62%; }
+
+.profile-wrapper .profile-content .text { text-align: left; }
+
+.card-wrapper { width: 80%; margin: 0 auto; padding: 30px 0; display: flex; flex-wrap: wrap; justify-content: space-between; }
+
+.card-wrapper .card { display: flex; width: 33%; justify-content: center; }
+
+.card-wrapper .card ul { padding: 0 20px; }
+
+.card-wrapper .card .skill-level { position: relative; display: inline-block; width: 100px; height: 20px; font-size: 20px; }
+
+.card-wrapper .card .skill-level:before { position: absolute; top: 0; left: 0; content: '▷▷▷▷▷'; display: inline-block; color: #fff; }
+
+.card-wrapper .card .skill-level:after { position: absolute; top: 0; left: 0; content: '▶︎▶︎▶︎▶︎▶︎'; display: inline-block; color: #b92c25; overflow: hidden; }
+
+.card-wrapper .card .level1:after { width: 20px; }
+
+.card-wrapper .card .level2:after { width: 40px; }
+
+.card-wrapper .card .level3:after { width: 60px; }
+
+.card-wrapper .card .level4:after { width: 80px; }
+
+.card-wrapper .card .level5:after { width: 100px; }
+
+figure { margin: 0; display: block; }
+
+figure a:hover { opacity: .5; }
+
+#works .card { display: inline-block; width: 33%; }
+
+#contact ul { width: 80%; margin: 0 auto; padding: 30px 0; text-align: center; display: flex; justify-content: center; }
+
+#contact ul li { width: 30px; margin-right: 60px; }
+
+#contact ul li .circle { border-radius: 50%; }
+
+#contact ul li .social-link { display: flex; height: 75px; width: 75px; background-color: #2a2a2a; justify-content: center; align-items: center; text-decoration: none; }
+
+#contact ul li a:hover { color: #22a6bf; }
+
+@media screen and (max-width: 767px) { #header { position: fixed; top: 0; left: 0; z-index: 10; align-items: center; justify-content: center; width: 100%; display: flex; }
+  #header ul { margin-top: 2.5em; }
+  #header .sp-off { display: none; }
+  #header #nav-icn { position: absolute; top: 0; left: 0; font-size: 0.8em; width: 4em; height: 3em; display: block; margin-top: 0; z-index: 15; }
+  #nav-toggle { position: fixed; top: 0.6em; left: 1.5em; width: 1.8em; height: 1.2em; }
+  #nav-toggle div { position: relative; }
+  #nav-toggle span { width: 100%; height: 1px; background: #fff; position: absolute; top: 0; left: 0; display: block; transition: transform .6s ease-in-out, top .5s ease; }
+  #nav-toggle span:nth-child(1) { top: 0; }
+  #nav-toggle span:nth-child(2) { top: 0.6em; }
+  #nav-toggle span:nth-child(3) { top: 1.2em; }
+  .open #nav-toggle span:nth-child(1) { top: 0.5em; transform: rotate(45deg); }
+  .open #nav-toggle span:nth-child(2) { top: 20px; width: 0; left: 50%; }
+  .open #nav-toggle span:nth-child(3) { top: 0.5em; transform: rotate(-45deg); }
+  #nav-toggle { z-index: 20; cursor: pointer; }
+  #global-nav { font-family: "游ゴシック体"; font-weight: normal; background: #000; color: #fff; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 18; text-align: center; display: flex; visibility: hidden; flex-direction: column; justify-content: center; align-items: center; font-size: 29px; opacity: 0; transition: opacity .6s ease, visibility .6s ease; }
+  #global-nav nav { width: 100%; }
+  #global-nav nav ul { padding: 0; }
+  #global-nav .profile { border-bottom: solid 7px #b92c25; }
+  #global-nav .skill { border-bottom: solid 7px #fb581f; }
+  #global-nav .works { border-bottom: solid 7px #22a6bf; }
+  #global-nav .contact { border-bottom: solid 7px #fff; }
+  #global-nav a { display: block; color: #fff; text-decoration: none; padding: 10px 0; transition: color .6s ease; }
+  #global-nav a:hover { color: #666; }
+  #global-nav ul { list-style: none; }
+  #global-nav ul li { opacity: 0; transform: translateX(200px); transition: transform .6s ease, opacity .2s ease; }
+  #global-nav ul li:nth-child(2) { transition-delay: .15s; }
+  #global-nav ul li:nth-child(3) { transition-delay: .3s; }
+  #global-nav ul li:nth-child(4) { transition-delay: .45s; }
+  #global-nav ul li:nth-child(5) { transition-delay: .6s; }
+  #global-nav ul li:nth-child(6) { transition-delay: .75s; }
+  #global-nav ul li:nth-child(7) { transition-delay: .9s; }
+  .open { overflow: hidden; }
+  .open #global-nav { visibility: visible; opacity: 1; }
+  .open #global-nav li { opacity: 1; transform: translateX(0); transition: transform 1s ease, opacity .9s ease; }
+  .close #global-nav { visibility: hidden; opacity: 0; }
+  .close #global-nav li { opacity: 0; transform: translateX(0); transition: transform 1s ease, opacity .9s ease; }
+  .profile-wrapper { display: inline-block; align-items: center; justify-content: center; }
+  .profile-wrapper .icon-img { margin: 0 0 30px 0; width: auto; }
+  .profile-wrapper .profile-content { margin: 0; width: auto; }
+  .center-logo { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block; z-index: 11; font-size: 1em; margin-top: 1.6em; font-family: serif; font-weight: normal; width: 25%; white-space: nowrap; cursor: pointer; }
+  #nav { display: none; width: 100%; padding-top: 14px; }
+  #nav li { position: relative; bottom: 1px; font-size: 0; line-height: 0; }
+  #nav li a { display: block; padding-top: 10%; background-repeat: no-repeat; background-position: center -40%; }
+  #skill .card-wrapper .card { width: 50%; }
+  #works .card-wrapper .card { width: 100%; margin: 0 0 30px 0; } }
