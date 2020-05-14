@@ -1,7 +1,7 @@
 body {
   background: #000;
-  font-family: 'Arial', serif;
-  font-weight: 900;
+  font-family: 'Arial';
+  font-weight: lighter;
   text-align: center;
   color: #fff;
 }
@@ -125,10 +125,15 @@ section {
     color: #22a6bf;
   }
   .icon-img {
-    width: 33%;
+    width: 35%;
+    img {
+      margin-top: 20px;
+      width: 200px;
+      height: 260px;
+    }
   }
   .profile-content {
-    width: 62%;
+    width: 60%;
     .text {
       text-align: left;
     }
@@ -196,19 +201,36 @@ section {
   }
 }
 
-// ポートフォリオ
+// ワークス
 
 figure {
   margin: 0;
   display: block;
-  a:hover {
-    opacity: .5;
+  a {
+    img {
+      width: 200px;
+      height: 150px;
+    }
+    &:hover {
+      opacity: .5;
+    }
   }
+}
+
+.rails-tutorial:hover {
+  color: #b92c25;
 }
 
 #works .card {
   display: inline-block;
   width: 33%;
+  // p {
+  //   font-weight: lighter;
+  // }
+}
+
+.wanna-do-list {
+  text-align: left;
 }
 
 // 問い合わせ
@@ -274,6 +296,7 @@ figure {
   }
 
   // トグルメニュー
+
   #nav-toggle {
     position:fixed;
     top: 0.6em;
@@ -410,11 +433,11 @@ figure {
     #global-nav {
       visibility: visible;
       opacity: 1;
-    }
-    #global-nav li {
-      opacity: 1;
-      transform: translateX(0);
-      transition:  transform 1s ease, opacity .9s ease;
+      li {
+        opacity: 1;
+        transform: translateX(0);
+        transition:  transform 1s ease, opacity .9s ease;
+      }
     }
   }
 
@@ -422,11 +445,11 @@ figure {
     #global-nav {
       visibility: hidden;
       opacity: 0;
-    }
-    #global-nav li {
-      opacity: 0;
-      transform: translateX(0);
-      transition:  transform 1s ease, opacity .9s ease;
+      li {
+        opacity: 0;
+        transform: translateX(0);
+        transition:  transform 1s ease, opacity .9s ease;
+      }
     }
   }
 
@@ -465,22 +488,19 @@ figure {
     display: none;
     width: 100%;
     padding-top: 14px;
+    li {
+  		position: relative;
+  		bottom: 1px;
+  		font-size: 0;
+  		line-height: 0;
+      a {
+    		display: block;
+    		padding-top: 10%;
+    		background-repeat: no-repeat;
+    		background-position: center -40%;
+    	}
+  	}
   }
-
-  #nav li {
-		position: relative;
-		bottom: 1px;
-		font-size: 0;
-		line-height: 0;
-	}
-
-	#nav li a {
-		display: block;
-		padding-top: 10%;
-		background-repeat: no-repeat;
-		background-position: center -40%;
-	}
-
 
   #skill {
     .card-wrapper .card {

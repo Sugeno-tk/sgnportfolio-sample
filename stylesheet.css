@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body { background: #000; font-family: 'Arial', serif; font-weight: 900; text-align: center; color: #fff; }
+body { background: #000; font-family: 'Arial'; font-weight: lighter; text-align: center; color: #fff; }
 
 li { list-style: none; }
 
@@ -47,9 +47,11 @@ section .section-title-block { text-align: center; margin-bottom: 30px; }
 
 .profile-wrapper a:hover { color: #22a6bf; }
 
-.profile-wrapper .icon-img { width: 33%; }
+.profile-wrapper .icon-img { width: 35%; }
 
-.profile-wrapper .profile-content { width: 62%; }
+.profile-wrapper .icon-img img { margin-top: 20px; width: 200px; height: 260px; }
+
+.profile-wrapper .profile-content { width: 60%; }
 
 .profile-wrapper .profile-content .text { text-align: left; }
 
@@ -77,9 +79,15 @@ section .section-title-block { text-align: center; margin-bottom: 30px; }
 
 figure { margin: 0; display: block; }
 
+figure a img { width: 200px; height: 150px; }
+
 figure a:hover { opacity: .5; }
 
+.rails-tutorial:hover { color: #b92c25; }
+
 #works .card { display: inline-block; width: 33%; }
+
+.wanna-do-list { text-align: left; }
 
 #contact ul { width: 80%; margin: 0 auto; padding: 30px 0; text-align: center; display: flex; justify-content: center; }
 
